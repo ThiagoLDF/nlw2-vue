@@ -1,0 +1,101 @@
+.classes-form {
+    margin-bottom: 6.4rem;
+    width: 740px;
+    padding-top: 6.4rem;
+}
+.classes-form fieldset {
+    border: none;
+    padding: 0 2.4rem;
+}
+.classes-form fieldset legend {
+    font: 700 2.4rem Archivo;
+    color: var(--color-text-title);
+    margin: 2.4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--color-line-in-white);
+}
+#add-time {
+    font: 600 1.2rem Archivo;
+}
+.classes-form fieldset+fieldset {
+    margin-top: 6.4rem;
+}
+.classes-form .input-block+.input-block, 
+.classes-form .input-block+.textarea-block,
+.classes-form .select-block+.input-block {
+    margin-top: 2.4rem;
+}
+.classes-form .footer {
+    padding: 4rem 2.4rem;
+    background: var(--color-box-footer);
+    border-top: 1px solid var(--color-line-in-white);
+    margin-top: 6.4rem;
+}
+.classes-form .footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--color-text-complemnent);
+}
+.classes-form .footer p img {
+    margin-right: 2rem;
+}
+.classes-form .footer button {
+    width: 100%;
+    height: 6.6rem;
+    color: var(--color-button-text);
+    font: 700 1.6rem Archivo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 3.2rem;
+}
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.overlay .container {
+    width: 50%;
+}
+.overlay h1 {
+    margin-top: 2.4rem;
+    font: 700 5.6rem Archivo;
+}
+.overlay p {
+    color: var(--color-text-in-primary);
+    margin-top: 2.4rem;
+}
+.overlay .container .redirect {
+    font-size: 1.2rem;
+}
+@media (min-width: 700px) {
+    .classes-form {
+        max-width: 100vw;
+    }
+    .classes-form fieldset {
+        padding: 0 64px;
+    }
+    .classes-form #schedule-items .select-block+.input-block, 
+    .classes-form #schedule-items .input-block+.input-block {
+        margin-top: 0;
+    }
+    .classes-form .footer {
+        padding: 40px 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .classes-form .footer button {
+        margin-top: 0;
+        width: 200px;
+    }
+}

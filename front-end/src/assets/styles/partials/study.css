@@ -1,0 +1,21 @@
+.proffys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-results {
+    margin: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+    .proffys {
+        min-width: 100vh;
+        display: flex;
+        justify-content: center;
+    }
+}
