@@ -52,18 +52,17 @@ export default {
     props: ["schedule"],
     data() {
         return {
-            valid: true,
             rule: [(v) => !!v || "Campo obrigatório"],
             timeRule: [
                 (v) => !!v || "Campo obrigatório",
-                v => v > this.schedule.timeFrom || "Horário inválido"
+                (v) => v > this.schedule.timeFrom || "Horário inválido",
             ],
         };
     },
     watch: {
         valid() {
-            this.$emit('validSchedule', this.valid)
-        }
+            this.$emit("validSchedule", this.valid);
+        },
     },
     computed: {
         weekdays() {
@@ -72,10 +71,18 @@ export default {
         schedules() {
             return this.$store.getters.currentSchedules;
         },
+        valid: {
+            get() {
+                return this.$store.getters.validSchedule;
+            },
+            set(value) {
+                return this.$store.commit('validSchedule', value)
+            }
+        },
     },
     methods: {
         remove() {
-            this.$emit('validSchedule', !this.valid)
+            this.$emit("validSchedule", !this.value);
             this.$store.dispatch("removeSchedule", this.schedule.id);
         },
     },

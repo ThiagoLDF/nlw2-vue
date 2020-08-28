@@ -8,6 +8,7 @@ export default new Vuex.Store({
     state: {
         proffy: [],
         schedules: [],
+        valid: true,
         currentIndex: 0,
         weekdays: [
             "Domingo",
@@ -47,6 +48,9 @@ export default new Vuex.Store({
         currentSchedules(state) {
             return state.schedules
         },
+        validSchedule(state) {
+            return state.valid
+        },
         currentIndex(state) {
             return state.currentIndex
         },
@@ -65,6 +69,9 @@ export default new Vuex.Store({
                 timeFrom: null,
                 timeTo: null,
             }))
+        },
+        validSchedule(state, payload) {
+            state.valid = payload 
         },
         incrementIndex(state) {
             state.currentIndex++
